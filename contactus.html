@@ -6,22 +6,75 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
+      margin: 0;
       background-color: #f4f4f4;
       color: #333;
     }
 
+    /* Navigation styles */
+    .top-nav {
+      background-color: #2e7d32;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      font-size: 18px;
+    }
+
+    .top-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 12px;
+      transition: background-color 0.3s ease;
+    }
+
+    .top-nav a:hover {
+      background-color: #256828;
+      border-radius: 4px;
+    }
+
     h1, h2 {
       color: #2e7d32;
+      text-align: center;
+      margin-top: 30px;
     }
 
-    .contact-info {
-      margin-bottom: 30px;
+    .info-boxes {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 30px 40px;
+      flex-wrap: nowrap;
+      max-width: 100%;
     }
 
-    .contact-info p {
+    .info-box {
+      flex: 1;
+      background-color: #ffffff;
+      border: 2px solid #2e7d32;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+
+    .info-box h3 {
+      margin-top: 0;
+      color: #2e7d32;
+      font-size: 18px;
+    }
+
+    .info-box p {
+      margin: 8px 0 0;
       font-size: 16px;
-      line-height: 1.6;
+    }
+
+    .info-box.motto p {
+      font-family: 'Monotype Corsiva', cursive;
+      font-size: 20px;
+      font-style: italic;
+      color: #2e7d32;
     }
 
     iframe {
@@ -33,10 +86,11 @@
 
     .form-section {
       background: white;
-      padding: 30px;
+      padding: 30px 40px;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       max-width: 100%;
+      margin-bottom: 40px;
     }
 
     .form-section input,
@@ -63,23 +117,65 @@
     .form-section button:hover {
       background-color: #256828;
     }
+
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    @media (max-width: 800px) {
+      .info-boxes {
+        flex-wrap: wrap;
+        margin: 30px 20px;
+      }
+
+      .info-box {
+        min-width: 100%;
+      }
+
+      .form-section {
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Navigation Bar -->
+  <div class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="projects.html">Projects</a>
+    <a href="supportus.html">Support Us</a>
+    <a href="contactus.html">Contact Us</a>
+  </div>
+
   <h1>Contact Us</h1>
   <h2>Titans Environmental Freedom Fighters</h2>
-  <p><em>Motto: "Earth of our only home! Lets make sure upcoming generations also have a home"</em></p>
 
-  <div class="contact-info">
-    <p><strong>Email:</strong> henryutonga@gmail.com</p>
-    <p><strong>Phone:</strong> +265991922611, +265888363604</p>
-    <p><strong>Location:</strong></p>
-    <iframe 
-      src="https://www.google.com/maps?q=-14.004482,33.755595&hl=en&z=14&output=embed"
-      allowfullscreen>
-    </iframe>
+  <div class="info-boxes">
+    <div class="info-box motto">
+      <h3>Motto</h3>
+      <p>“Earth is our only home. Let’s preserve it for generations to come.”</p>
+    </div>
+    <div class="info-box">
+      <h3>Email</h3>
+      <p>henryutonga@gmail.com</p>
+    </div>
+    <div class="info-box">
+      <h3>Phone</h3>
+      <p>+265991922611<br>+265888363604</p>
+    </div>
   </div>
+
+  <iframe 
+    src="https://www.google.com/maps?q=-14.004482,33.755595&hl=en&z=14&output=embed"
+    allowfullscreen>
+  </iframe>
 
   <h2>Send Us a Message</h2>
   <div class="form-section">
@@ -90,6 +186,11 @@
       <button type="submit">Send Message</button>
     </form>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    “Earth is our only home. Let’s preserve it for generations to come.”
+  </footer>
 
 </body>
 </html>
